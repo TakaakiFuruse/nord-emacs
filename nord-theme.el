@@ -66,7 +66,7 @@
   :type 'boolean
   :group 'nord)
 
-(setq nord-brightened-comments '("#4c566a" "#4e586d" "#505b70" "#525d73" "#556076" "#576279" "#59647c" "#5b677f" "#5d6982" "#5f6c85" "#616e88" "#63718b" "#66738e" "#687591" "#6a7894" "#6d7a96" "#6f7d98" "#72809a" "#75829c" "#78859e" "#7b88a1"))
+(setq nord-brightened-comments '("#4c566a" "#4e586d" "#505b70" "#525d73" "#556076" "#576279" "#59647c" "#5b677f" "#5d6982" "#5f6c85" "#616e88" "#63718b" "#66738e" "#687591" "#6a7894" "#6d7a96" "#6f7d98" "#72809a" "#75829c" "#b1bdd6"))
 
 (defun brightened-comment-color (percent)
   "Returns the brightened comment color for the given percent.
@@ -98,7 +98,7 @@
   (nord-annotation (if (display-graphic-p) "#D08770" "brightyellow"))
   (nord-attribute (if (display-graphic-p) "#8FBCBB" "cyan"))
   (nord-class (if (display-graphic-p) "#8FBCBB" "cyan"))
-  (nord-comment (if (display-graphic-p) (brightened-comment-color nord-comment-brightness) "brightblack"))
+  (nord-comment "#a1acc4")
   (nord-escape (if (display-graphic-p) "#D08770" "brightyellow"))
   (nord-method (if (display-graphic-p) "#88C0D0" "brightcyan"))
   (nord-keyword (if (display-graphic-p) "#81A1C1" "blue"))
@@ -133,7 +133,7 @@
     `(font-lock-comment-face ((,class (:foreground ,nord-comment))))
     `(font-lock-comment-delimiter-face ((,class (:foreground ,nord-comment))))
     `(font-lock-constant-face ((,class (:foreground ,nord9))))
-    `(font-lock-doc-face ((,class (:foreground ,nord-comment))))
+    `(font-lock-doc-face ((,class (:foreground , "#8facea"))))
     `(font-lock-function-name-face ((,class (:foreground ,nord8))))
     `(font-lock-keyword-face ((,class (:foreground ,nord9))))
     `(font-lock-negation-char-face ((,class (:foreground ,nord9))))
@@ -210,6 +210,7 @@
     `(link-visited ((,class (:underline t))))
     `(linum ((,class (:foreground ,nord3 :background ,nord0))))
     `(linum-relative-current-face ((,class (:foreground ,nord3 :background ,nord0))))
+    `(line-number ((,class (:weight thin :underline nil :foreground ,"#8294b2" :background ,nord0))))
     `(match ((,class (:inherit isearch))))
     `(message-cited-text ((,class (:foreground ,nord4))))
     `(message-header-cc ((,class (:foreground ,nord9))))
